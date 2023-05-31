@@ -1,9 +1,13 @@
 package org.learning.java.es1;
 import java.util.Scanner;
+import java.text.DecimalFormat;
+
 
 public class BigliettoTreno {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
+    
+    DecimalFormat format = new DecimalFormat("#.00");
     
     double pricePerKm = 0.21;
     int percUnder18 = 20;
@@ -25,13 +29,12 @@ public class BigliettoTreno {
     }
     else if (age>65) {
       finalTicketPrice = ticketNoDisc - (ticketNoDisc/100)*percOver65;
+    }
+    else finalTicketPrice = ticketNoDisc;
     
-    }
-    else{
-      finalTicketPrice = ticketNoDisc;
-      
-    }
-    System.out.println("Il prezzo del tuo biglietto è: " + finalTicketPrice);
+    String finalTicketPriceFormatted = format.format(finalTicketPrice);
+    
+    System.out.println("Il prezzo del tuo biglietto è: " + finalTicketPriceFormatted);
   }
     }
     
