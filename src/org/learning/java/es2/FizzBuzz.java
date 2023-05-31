@@ -6,11 +6,11 @@ public class FizzBuzz {
     Scanner scanner = new Scanner(System.in);
     int number;
     do {
-      System.out.println("Quanti numeri (tra 1 e 1000) vuoi stampare?");
+      System.out.println("Quanti numeri 0(tra 1 e 1000) vuoi stampare?");
       number = scanner.nextInt();
       
     }
-    while(number<0 || number>1000 );
+    while(number<1 || number>1000 );
     
     for (int i = 1; i <= number; i++) {
       
